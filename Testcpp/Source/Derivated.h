@@ -10,6 +10,7 @@ class MyData
         MyData(int value);
         ~MyData();
 
+    int getValue();
 
     private:
         
@@ -37,6 +38,8 @@ class Derivated : public Cbase
         Derivated(bool flag);
         virtual ~Derivated();
 
+        int operator+ (const Derivated& obj);
+        int operator<< (const Derivated& obj);
 
         bool& getInversFlag();
 
@@ -98,7 +101,10 @@ MyData::~MyData()
 
 }
 //---------------------------
-
+int MyData::getValue()
+{
+    return value;
+}
 
 
 //---------------------------
