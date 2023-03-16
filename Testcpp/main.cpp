@@ -29,6 +29,7 @@ union testData
 
 int main()
 {
+    Cbase b_obj;
     Derivated d_obl;
     Derivated d_obl2;
     Derivated *p = new Derivated(true);
@@ -39,7 +40,8 @@ int main()
      // 1) Чему равен размер unionData? 
         testData unionData;
         
-
+    p_base = &d_obl2;
+    
     // 2) Чему равно значение переменной value класса Data, в объекте d_obl ?
 
     // 3)  Чему равно значение переменной value через указатель p ?
@@ -52,8 +54,9 @@ int main()
 
     // 5)  Почему при вызове функции  getInversFlag падает программа?  (bool flag = d_obl.getInversFlag();)
 
+
     // 6)  Перезагрузи операторы класа Derivated что бы можно было выполнить следующую команду   std::cout << d_obl + d_obl2 ( MyData::value +  MyData::value) ;
-        
+    
 
     std::cout << "Stop!" << std::endl;
 }

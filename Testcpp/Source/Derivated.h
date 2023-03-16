@@ -25,7 +25,6 @@ class Cbase
         Cbase();
         virtual ~Cbase();
 
-    MyData *date;    
 
     private:
 
@@ -38,8 +37,7 @@ class Derivated : public Cbase
         Derivated(bool flag);
         virtual ~Derivated();
 
-        int operator+ (const Derivated& obj);
-        int operator<< (const Derivated& obj);
+        MyData *date;  
 
         bool& getInversFlag();
 
@@ -58,7 +56,7 @@ Cbase::Cbase()
 //---------------------------
 Cbase::~Cbase()
 {
-    delete date;
+       
 }
 //---------------------------
 Derivated::Derivated() : flag(false)
@@ -77,7 +75,7 @@ Derivated::Derivated(bool flag)
 //---------------------------
 Derivated::~Derivated()
 {
-
+     delete date;
 }
 //---------------------------
 bool& Derivated::getInversFlag()
