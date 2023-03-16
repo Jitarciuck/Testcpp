@@ -25,6 +25,7 @@ class Cbase
         Cbase();
         virtual ~Cbase();
 
+        void printArrary(const int *arr, int size);
 
     private:
 
@@ -57,6 +58,15 @@ Cbase::Cbase()
 Cbase::~Cbase()
 {
        
+}
+//---------------------------
+void Cbase::printArrary(const int *arr, int size)
+{
+    for(int i = 0; i < size; i++)
+    {
+        std::cout << arr[i];
+    }
+
 }
 //---------------------------
 Derivated::Derivated() : flag(false)

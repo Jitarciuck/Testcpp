@@ -35,13 +35,14 @@ int main()
     Derivated *p = new Derivated(true);
     Derivated *p_derivate;
     Cbase *p_base;
+    int arr[10] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
 
 
-     // 1) Чему равен размер unionData? 
-        testData unionData;
-        
-    p_base = &d_obl2;
-    
+    //1)  Вызвать функцию printArrary через указатель p_base объекта d_obl2
+
+    //2) Конвертировать указатель p_base в указатель p_derivate и вызвать функцию printArrary через этот указатель
+
+
     // 2) Чему равно значение переменной value класса Data, в объекте d_obl ?
 
     // 3)  Чему равно значение переменной value через указатель p ?
@@ -57,6 +58,9 @@ int main()
 
     // 6)  Перезагрузи операторы класа Derivated что бы можно было выполнить следующую команду   std::cout << d_obl + d_obl2 ( MyData::value +  MyData::value) ;
     
+
+      // 1) Чему равен размер unionData? 
+        testData unionData;
 
     std::cout << "Stop!" << std::endl;
 }
