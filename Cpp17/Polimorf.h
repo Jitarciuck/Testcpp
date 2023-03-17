@@ -51,3 +51,12 @@ void double_each_elemnt( container_of_ints& arr)
         arr.at(i) *= 2;
     }
 }
+
+template<class ContainerModel>
+void double_elemnt( ContainerModel& arr)
+{
+    for(int i = 0; i< arr.size(); i++)
+    {
+        arr.at(i) *= 2;
+    }
+}
