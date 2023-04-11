@@ -1,8 +1,11 @@
 #include <iostream>
 #include <vector>
 #include <string>
-#include "Polimorf.h"
 #include <algorithm>
+
+#include "Polimorf.h"
+#include "TestClass.h"
+
 
 
 int main()
@@ -36,6 +39,11 @@ int main()
 
     std::cout<< "S1 = " << vecIn[0] << std::endl;
     std::cout<< "S2 = " << vecIn[1] << std::endl;
+
+
+    TestClass obj;
+
+    std::cout<< "Get count:" <<  obj.getCount() << std::endl;;
 
     std::cout<< "Stop!" << std::endl;
     return 0;
