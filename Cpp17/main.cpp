@@ -5,8 +5,6 @@
 
 
 
-
-
 int main()
 {
 
@@ -19,8 +17,13 @@ int main()
     double_elemnt(arr);
     double_elemnt(lst);
 
-    std::vector<int > vec = {1, 2, 3};
+    std::vector<int > vec = {1, 2, 3, 5, 6, 7, 8, 9};
     double_elemnt(vec);
+
+
+    int number_above =  count_if(vec.begin(), vec.end(), [](int e){return e > 5;});
+    std::cout<< "number_above: " << number_above << std::endl;
+
 
     std::cout<< "Stop!" << std::endl;
     return 0;

@@ -60,3 +60,19 @@ void double_elemnt( ContainerModel& arr)
         arr.at(i) *= 2;
     }
 }
+
+
+
+template<typename Iterator, typename Predicator>
+int count_if(Iterator begin, Iterator end, Predicator pred)
+{
+    int sum = 0;
+    for(auto it = begin; it != end; ++it)
+    {
+        if(pred(*it))
+        {
+            sum += 1;
+        }
+    }
+    return sum;
+}
