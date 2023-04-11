@@ -64,7 +64,7 @@ void double_elemnt( ContainerModel& arr)
 
 
 template<typename Iterator, typename Predicator>
-int count_if(Iterator begin, Iterator end, Predicator pred)
+int count_ifPredicate(Iterator begin, Iterator end, Predicator pred)
 {
     int sum = 0;
     for(auto it = begin; it != end; ++it)

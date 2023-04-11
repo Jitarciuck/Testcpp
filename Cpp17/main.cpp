@@ -2,7 +2,7 @@
 #include <vector>
 #include <string>
 #include "Polimorf.h"
-
+#include <algorithm>
 
 
 int main()
@@ -21,9 +21,21 @@ int main()
     double_elemnt(vec);
 
 
-    int number_above =  count_if(vec.begin(), vec.end(), [](int e){return e > 5;});
+    int number_above =  count_ifPredicate(vec.begin(), vec.end(), [](int e){return e > 5;});
     std::cout<< "number_above: " << number_above << std::endl;
 
+
+    std::vector<const char *> vecOut = {"String1", "String2"};
+    std::vector<std::string > vecIn(2);
+
+    std::transform(vecOut.begin(), vecOut.end(), vecIn.begin(), [](std::string s)
+        { 
+            std::transform(s.begin(), s.end(), s.begin(), ::toupper);
+            return s;
+        }  );
+
+    std::cout<< "S1 = " << vecIn[0] << std::endl;
+    std::cout<< "S2 = " << vecIn[1] << std::endl;
 
     std::cout<< "Stop!" << std::endl;
     return 0;
